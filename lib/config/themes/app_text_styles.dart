@@ -8,8 +8,8 @@ class AppTextStyles {
     fontFamily: 'Quicksand',
   );
 
-  static const big50 = TextStyle(
-    fontSize: 50,
+  static const bigIntro = TextStyle(
+    fontSize: 25,
     fontWeight: FontWeight.w400,
     color: AppColors.primaryTextColor,
     fontFamily: 'Quicksand',

@@ -1,40 +1,43 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:sunday/config/themes/app_text_styles.dart';
-import 'package:sunday/generated/l10n.dart';
+import 'package:sunday/widgets/intro_carosel_widget.dart';
 
-class IntroPage extends StatelessWidget {
+class IntroPage extends StatefulWidget {
   const IntroPage({super.key});
+
+  @override
+  State<StatefulWidget> createState() {
+    return _IntroPageState();
+  }
+}
+
+class _IntroPageState extends State<IntroPage> {
+  CarouselController controller = CarouselController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Container(
-            width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height / 2,
-            decoration: BoxDecoration(
-              image: DecorationImage(
+      body: SafeArea(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Container(
+              width: MediaQuery.of(context).size.width,
+              height: 400,
+              decoration: BoxDecoration(
+                  image: DecorationImage(
                 image: AssetImage('assets/images/intro.png'),
                 fit: BoxFit.cover,
                 alignment: Alignment.center,
-              )
+              )),
             ),
-          ),
-          SizedBox(height: 12,),
-          Padding(
-            padding: const EdgeInsets.only(left: 32.0, right: 32.0),
-            child: RichText(text: TextSpan(
-              style: AppTextStyles.big50,
-              children: [
-                TextSpan(text: S.of(context).intro_highlight, style: TextStyle(fontWeight: FontWeight.bold)),
-                TextSpan(text: S.of(context).intro_normal),
-              ]
-            ),),
-          ),
-        ],
-      ),),
+            SizedBox(
+              height: 12,
+            ),
+            IntroCaroselWidget()
+          ],
+        ),
+      ),
     );
   }
 }
