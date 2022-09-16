@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sunday/config/constants/app_prefs.dart';
+import 'package:sunday/config/themes/app_colors.dart';
 import 'package:sunday/generated/l10n.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import '../config/themes/app_text_styles.dart';
@@ -76,7 +77,7 @@ class _IntroCaroselWidgetState extends State<IntroCaroselWidget> {
                     width: _indexCurrent == entry.key ? 11.0 : 6,
                     height: _indexCurrent == entry.key ? 11.0 : 6,
                     margin: EdgeInsets.only(right: 2),
-                    decoration: BoxDecoration(shape: BoxShape.circle, color: Color(0xFF000000).withOpacity(_indexCurrent == entry.key ? 0.9 : 0.4)),
+                    decoration: BoxDecoration(shape: BoxShape.circle, color: AppColors.primaryBtnColor.withOpacity(_indexCurrent == entry.key ? 0.9 : 0.4)),
                   ),
                 );
               }).toList(),
@@ -89,7 +90,7 @@ class _IntroCaroselWidgetState extends State<IntroCaroselWidget> {
               child: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(32.0),
-                  color: Color(0xFF111111),
+                  color: AppColors.primaryBtnColor,
                 ),
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 30),
