@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:sunday/config/constants/app_prefs.dart';
 import 'package:sunday/generated/l10n.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import '../config/themes/app_text_styles.dart';
@@ -79,16 +81,22 @@ class _IntroCaroselWidgetState extends State<IntroCaroselWidget> {
                 );
               }).toList(),
             ),
-            Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(32.0),
-                color: Color(0xFF111111),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 30),
-                child: SvgPicture.asset(
-                  'assets/icons/long_arrow_right.svg',
-                  fit: BoxFit.contain,
+            GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, 'Home');
+                SharedPreferences.getInstance().then((prefs) async => await prefs.setBool(AppPrefs.introDisplayed, true));
+              },
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(32.0),
+                  color: Color(0xFF111111),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 30),
+                  child: SvgPicture.asset(
+                    'assets/icons/long_arrow_right.svg',
+                    fit: BoxFit.contain,
+                  ),
                 ),
               ),
             )
