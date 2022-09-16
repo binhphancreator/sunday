@@ -50,11 +50,21 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `Manage your task and ideas quickly`
-  String get intro {
+  /// `Manage `
+  String get intro_highlight {
     return Intl.message(
-      'Manage your task and ideas quickly',
-      name: 'intro',
+      'Manage ',
+      name: 'intro_highlight',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `your task and ideas quickly`
+  String get intro_normal {
+    return Intl.message(
+      'your task and ideas quickly',
+      name: 'intro_normal',
       desc: '',
       args: [],
     );

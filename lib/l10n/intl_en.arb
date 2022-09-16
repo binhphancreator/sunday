@@ -1,3 +1,4 @@
 {
-    "intro" : "Manage your task and ideas quickly"
+    "intro_highlight": "Manage ",
+    "intro_normal" : "your task and ideas quickly"
 }
