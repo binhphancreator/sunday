@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:sunday/pages/home_page.dart';
 import 'package:sunday/pages/intro_page.dart';
+import 'package:sunday/routes/routes.dart';
 
 class RouterGenerator {
   static Route<dynamic>? generateRoute(RouteSettings settings) {
     switch (settings.name) {
-      case 'Intro':
+      case RoutesPage.introPage:
         return MaterialPageRoute(builder: (_) => const IntroPage());
 
-      case 'Home':
+      case RoutesPage.homePage:
         return MaterialPageRoute(builder: (_) => const HomePage());
 
       default:

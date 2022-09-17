@@ -4,6 +4,7 @@ import 'package:sunday/config/constants/app_prefs.dart';
 import 'package:sunday/config/themes/app_colors.dart';
 import 'package:sunday/generated/l10n.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:sunday/routes/routes.dart';
 import '../config/themes/app_text_styles.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -84,7 +85,7 @@ class _IntroCaroselWidgetState extends State<IntroCaroselWidget> {
             ),
             GestureDetector(
               onTap: () {
-                Navigator.pushNamed(context, 'Home');
+                Navigator.pushNamed(context, RoutesPage.homePage);
                 SharedPreferences.getInstance().then((prefs) async => await prefs.setBool(AppPrefs.introDisplayed, true));
               },
               child: Container(

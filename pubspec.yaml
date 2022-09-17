@@ -29,7 +29,7 @@ flutter:
     - assets/images/
     - assets/icons/
     - assets/icons/regular/
-    - assets/icons/bold/
+    - assets/icons/solid/
   uses-material-design: true
   fonts:
     - family: Quicksand
