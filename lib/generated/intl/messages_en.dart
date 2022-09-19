@@ -27,6 +27,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "intro_slide_1": MessageLookupByLibrary.simpleMessage(
             "Orginize Your Task & Projects Easily"),
         "let_begin": MessageLookupByLibrary.simpleMessage("Let\'s begin"),
-        "next": MessageLookupByLibrary.simpleMessage("Next")
+        "next": MessageLookupByLibrary.simpleMessage("Next"),
+        "skip": MessageLookupByLibrary.simpleMessage("Skip")
       };
 }

@@ -31,4 +31,12 @@ class AppTextStyles {
     fontFamily: 'Quicksand',
     height: 1.2,
   );
+
+  static const mainNormalTextBtn = TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.w500,
+    color: AppColors.primaryColor,
+    fontFamily: 'Quicksand',
+    height: 1.2,
+  );
 }
