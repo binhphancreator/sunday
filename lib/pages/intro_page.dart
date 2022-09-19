@@ -1,6 +1,12 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:sunday/config/themes/app_text_styles.dart';
+import 'package:sunday/generated/l10n.dart';
 import 'package:sunday/widgets/intro_carosel_widget.dart';
+import 'package:sunday/routes/routes.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:sunday/config/constants/app_prefs.dart';
+import 'package:sunday/config/themes/app_colors.dart';
 
 class IntroPage extends StatefulWidget {
   const IntroPage({super.key});
@@ -21,20 +27,32 @@ class _IntroPageState extends State<IntroPage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Container(
-              width: MediaQuery.of(context).size.width,
-              height: 400,
-              decoration: BoxDecoration(
-                  image: DecorationImage(
-                image: AssetImage('assets/images/intro.png'),
-                fit: BoxFit.cover,
-                alignment: Alignment.center,
-              )),
-            ),
             SizedBox(
-              height: 12,
+              height: 24,
             ),
-            IntroCaroselWidget()
+            IntroCaroselWidget(),
+            SizedBox(
+              height: 48,
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, RoutesPage.homePage);
+                SharedPreferences.getInstance().then((prefs) async => await prefs.setBool(AppPrefs.introDisplayed, true));
+              },
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(32.0),
+                  color: AppColors.primaryColor,
+                ),
+                width: MediaQuery.of(context).size.width - 64,
+                padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 16),
+                child: Text(
+                  S.of(context).let_begin,
+                  style: AppTextStyles.primaryNormalTextBtn,
+                  textAlign: TextAlign.center,
+                ),
+              ),
+            )
           ],
         ),
       ),

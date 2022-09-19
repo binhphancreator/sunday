@@ -1,28 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:sunday/routes/router.dart';
-import 'generated/l10n.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:sunday/config/constants/app_prefs.dart';
+import 'package:sunday/routes/routes.dart';
+import 'package:sunday/sunday.dart';
 
-void main() {
-  runApp(const MyApp());
+Future<String> getInitRoute() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  var prefs = await SharedPreferences.getInstance();
+  String initRoute = RoutesPage.introPage;
+  if (prefs.getBool(AppPrefs.introDisplayed) == true) {
+    initRoute = RoutesPage.homePage;
+  }
+  return initRoute;
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      localizationsDelegates: [
-        S.delegate,
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-      ],
-      supportedLocales: S.delegate.supportedLocales,
-      title: 'Sunday',
-      initialRoute: 'Intro',
-      onGenerateRoute: RouterGenerator.generateRoute,
-    );
-  }
+void main() {
+  getInitRoute().then((nameRoute) => runApp(Sunday(
+        initRoute: nameRoute,
+      )));
 }

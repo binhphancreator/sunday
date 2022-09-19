@@ -9,10 +9,26 @@ class AppTextStyles {
   );
 
   static const bigIntro = TextStyle(
-    fontSize: 25,
-    fontWeight: FontWeight.w400,
+    fontSize: 20,
+    fontWeight: FontWeight.w600,
     color: AppColors.primaryTextColor,
     fontFamily: 'Quicksand',
-    height: 1.5,
+    height: 1.2,
+  );
+
+  static const bigIntro2 = TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.w500,
+    color: AppColors.secondaryTextColor,
+    fontFamily: 'Quicksand',
+    height: 1.2,
+  );
+
+  static const primaryNormalTextBtn = TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.w500,
+    color: Colors.white,
+    fontFamily: 'Quicksand',
+    height: 1.2,
   );
 }

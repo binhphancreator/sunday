@@ -50,21 +50,41 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `Manage `
-  String get intro_highlight {
+  /// `Orginize Your Task & Projects Easily`
+  String get intro_slide_1 {
     return Intl.message(
-      'Manage ',
-      name: 'intro_highlight',
+      'Orginize Your Task & Projects Easily',
+      name: 'intro_slide_1',
       desc: '',
       args: [],
     );
   }
 
-  /// `your task and ideas quickly`
-  String get intro_normal {
+  /// `Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`
+  String get bl_intro_slide_1 {
     return Intl.message(
-      'your task and ideas quickly',
-      name: 'intro_normal',
+      'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+      name: 'bl_intro_slide_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Next`
+  String get next {
+    return Intl.message(
+      'Next',
+      name: 'next',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Let's begin`
+  String get let_begin {
+    return Intl.message(
+      'Let\'s begin',
+      name: 'let_begin',
       desc: '',
       args: [],
     );
