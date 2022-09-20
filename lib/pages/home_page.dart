@@ -4,7 +4,7 @@ import 'package:sunday/config/themes/app_colors.dart';
 import 'package:sunday/config/themes/app_text_styles.dart';
 import 'package:sunday/widgets/days_week_list_widget.dart';
 import 'package:sunday/widgets/menu_bar_widget.dart';
-import 'package:sunday/widgets/projects_list_widget.dart';
+import 'package:sunday/widgets/tasks_list_widget.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -21,132 +21,159 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       bottomNavigationBar: const MenuBarWidget(),
       body: SafeArea(
-        child: Column(
-          children: [
-            Container(
-              color: AppColors.bgColorWhite,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(16),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Row(
+        child: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          child: SizedBox(
+            height: MediaQuery.of(context).size.height - 69,
+            child: Column(
+              children: [
+                Container(
+                  color: AppColors.bgColorWhite,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(16),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Container(
-                              width: 48,
-                              height: 48,
-                              decoration: BoxDecoration(
-                                image: DecorationImage(image: NetworkImage(_srcAvatar), fit: BoxFit.cover),
-                                shape: BoxShape.circle,
-                              ),
-                            ),
-                            SizedBox(
-                              width: 12,
-                            ),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
+                            Row(
                               children: [
-                                Text(
-                                  'Phan Văn Bình',
-                                  style: AppTextStyles.boldh2,
-                                  textAlign: TextAlign.start,
+                                Container(
+                                  width: 48,
+                                  height: 48,
+                                  decoration: BoxDecoration(
+                                    image: DecorationImage(image: NetworkImage(_srcAvatar), fit: BoxFit.cover),
+                                    shape: BoxShape.circle,
+                                  ),
                                 ),
                                 SizedBox(
-                                  height: 3,
+                                  width: 12,
                                 ),
-                                Text(
-                                  'Good morning 👋',
-                                  style: AppTextStyles.lightboldh4,
-                                  textAlign: TextAlign.start,
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      'Phan Văn Bình',
+                                      style: AppTextStyles.boldh2,
+                                      textAlign: TextAlign.start,
+                                    ),
+                                    SizedBox(
+                                      height: 3,
+                                    ),
+                                    Text(
+                                      'Good morning 👋',
+                                      style: AppTextStyles.lightboldh4,
+                                      textAlign: TextAlign.start,
+                                    )
+                                  ],
+                                )
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                GestureDetector(
+                                  onTap: () {},
+                                  child: SvgPicture.asset(
+                                    'assets/icons/regular/search.svg',
+                                    width: 16,
+                                    height: 16,
+                                    color: AppColors.menuInactiveColor,
+                                  ),
                                 )
                               ],
                             )
                           ],
                         ),
-                        Row(
+                      ),
+                      SizedBox(
+                        height: 12,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 16, right: 16),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
+                            Text(
+                              'Create and',
+                              style: AppTextStyles.bigboldh1,
+                            ),
+                            Text(
+                              'Check Daily Task 🙌',
+                              style: AppTextStyles.bigboldh1,
+                            ),
+                          ],
+                        ),
+                      ),
+                      SizedBox(
+                        height: 36,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 16, right: 16),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              'Weekly Task',
+                              style: AppTextStyles.lightboldh3,
+                            ),
                             GestureDetector(
                               onTap: () {},
                               child: SvgPicture.asset(
-                                'assets/icons/regular/search.svg',
+                                'assets/icons/regular/plus.svg',
                                 width: 16,
                                 height: 16,
                                 color: AppColors.menuInactiveColor,
                               ),
                             )
                           ],
-                        )
-                      ],
-                    ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 12,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 16, right: 0),
+                        child: DaysWeekListWidget(),
+                      ),
+                      SizedBox(
+                        height: 36,
+                      ),
+                      TasksListWidget(),
+                    ],
                   ),
-                  SizedBox(
-                    height: 12,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 16, right: 16),
+                ),
+                Expanded(
                     child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Create and',
-                          style: AppTextStyles.bigboldh1,
-                        ),
-                        Text(
-                          'Check Daily Task 🙌',
-                          style: AppTextStyles.bigboldh1,
-                        ),
-                      ],
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SizedBox(
+                      height: 12,
                     ),
-                  ),
-                  SizedBox(
-                    height: 36,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 16, right: 16),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          'Weekly Task',
-                          style: AppTextStyles.lightboldh3,
-                        ),
-                        GestureDetector(
-                          onTap: () {},
-                          child: SvgPicture.asset(
-                            'assets/icons/regular/plus.svg',
-                            width: 16,
-                            height: 16,
-                            color: AppColors.menuInactiveColor,
+                    Padding(
+                      padding: const EdgeInsets.only(left: 16, right: 16),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'Category Task',
+                            style: AppTextStyles.lightboldh4,
                           ),
-                        )
-                      ],
+                          GestureDetector(
+                            onTap: () {},
+                            child: Text(
+                              'See all',
+                              style: AppTextStyles.boldh4,
+                            ),
+                          )
+                        ],
+                      ),
                     ),
-                  ),
-                  SizedBox(
-                    height: 12,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 16, right: 0),
-                    child: DaysWeekListWidget(),
-                  ),
-                  SizedBox(
-                    height: 36,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 16, right: 0),
-                    child: ProjectListWidget(),
-                  ),
-                  SizedBox(
-                    height: 36,
-                  ),
-                ],
-              ),
+                  ],
+                ))
+              ],
             ),
-            Expanded(child: Column())
-          ],
+          ),
         ),
       ),
       backgroundColor: AppColors.bgColor,

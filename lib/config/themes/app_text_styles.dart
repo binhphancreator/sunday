@@ -5,17 +5,21 @@ class AppTextStyles {
   static const bigboldh1 = TextStyle(fontSize: 35, color: AppColors.primaryTextColor, fontFamily: 'Quicksand', fontWeight: FontWeight.w600);
 
   static const h1 = TextStyle(
-    fontSize: 18,
+    fontSize: 20,
     color: AppColors.primaryTextColor,
     fontFamily: 'Quicksand',
     fontWeight: FontWeight.normal,
   );
-  static const boldh1 = TextStyle(fontSize: 18, color: AppColors.primaryTextColor, fontFamily: 'Quicksand', fontWeight: FontWeight.w600);
+  static const boldh1 = TextStyle(fontSize: 20, color: AppColors.primaryTextColor, fontFamily: 'Quicksand', fontWeight: FontWeight.w600);
   static const boldh2 = TextStyle(fontSize: 18, color: AppColors.primaryTextColor, fontFamily: 'Quicksand', fontWeight: FontWeight.w600);
-  static const boldh3 = TextStyle(fontSize: 16, color: AppColors.primaryTextColor, fontFamily: 'Quicksand', fontWeight: FontWeight.w500);
-  static const lightboldh2 = TextStyle(fontSize: 18, color: AppColors.secondaryTextColor, fontFamily: 'Quicksand', fontWeight: FontWeight.w500);
-  static const lightboldh3 = TextStyle(fontSize: 16, color: AppColors.secondaryTextColor, fontFamily: 'Quicksand', fontWeight: FontWeight.w500);
-  static const lightboldh4 = TextStyle(fontSize: 15, color: AppColors.secondaryTextColor, fontFamily: 'Quicksand', fontWeight: FontWeight.w500);
+  static const boldh3 = TextStyle(fontSize: 16, color: AppColors.primaryTextColor, fontFamily: 'Quicksand', fontWeight: FontWeight.w600);
+  static const boldh4 = TextStyle(fontSize: 15, color: AppColors.primaryTextColor, fontFamily: 'Quicksand', fontWeight: FontWeight.w600);
+  static const boldh5 = TextStyle(fontSize: 15, color: AppColors.primaryTextColor, fontFamily: 'Quicksand', fontWeight: FontWeight.w600);
+
+  static const lightboldh2 = TextStyle(fontSize: 18, color: AppColors.secondaryTextColor, fontFamily: 'Quicksand', fontWeight: FontWeight.w600);
+  static const lightboldh3 = TextStyle(fontSize: 16, color: AppColors.secondaryTextColor, fontFamily: 'Quicksand', fontWeight: FontWeight.w600);
+  static const lightboldh4 = TextStyle(fontSize: 15, color: AppColors.secondaryTextColor, fontFamily: 'Quicksand', fontWeight: FontWeight.w600);
+  static const lightboldh5 = TextStyle(fontSize: 14, color: AppColors.secondaryTextColor, fontFamily: 'Quicksand', fontWeight: FontWeight.w600);
 
   static const bigIntro = TextStyle(
     fontSize: 20,
@@ -68,6 +72,14 @@ class AppTextStyles {
   static const mainNormalTextBtn = TextStyle(
     fontSize: 16,
     fontWeight: FontWeight.w500,
+    color: AppColors.primaryColor,
+    fontFamily: 'Quicksand',
+    height: 1.2,
+  );
+
+  static const mainSmallBoldTextBtn = TextStyle(
+    fontSize: 15,
+    fontWeight: FontWeight.w600,
     color: AppColors.primaryColor,
     fontFamily: 'Quicksand',
     height: 1.2,

@@ -10,7 +10,7 @@ class DaysWeekListWidget extends StatefulWidget {
 }
 
 class _DaysWeekListWidgetState extends State<DaysWeekListWidget> {
-  final List<String> shortWeekday = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
+  final List<String> shortWeekday = ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"];
   @override
   Widget build(BuildContext context) {
     DateTime now = DateTime.now();
@@ -28,7 +28,7 @@ class _DaysWeekListWidgetState extends State<DaysWeekListWidget> {
               padding: EdgeInsets.all(0),
               margin: EdgeInsets.only(right: 12),
               width: 55,
-              height: 100,
+              height: 80,
               decoration: BoxDecoration(color: now.weekday == currentDay.weekday ? AppColors.primaryColor : AppColors.lightBtnColor, borderRadius: BorderRadius.circular(30), gradient: now.weekday == currentDay.weekday ? AppColors.primaryGradient : AppColors.lightGradient),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,

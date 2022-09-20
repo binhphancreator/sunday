@@ -14,6 +14,7 @@ class AppColors {
   static const lightPrimaryColor = Color(0xFFE8DAEF);
   static const secondaryColor = Color(0xFF69e42e);
   static const menuInactiveColor = Color(0xFF424949);
+  static const defaultIconColor = Color(0xFF424949);
   static const primaryBoxShadowColor = Color.fromARGB(30, 17, 12, 46);
   static const primaryGradient = LinearGradient(
     colors: [
