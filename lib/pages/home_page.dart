@@ -90,19 +90,29 @@ class _HomePageState extends State<HomePage> {
                         height: 12,
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(left: 16, right: 16),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'Create and',
-                              style: AppTextStyles.bigboldh1,
+                        padding: const EdgeInsets.all(16.0),
+                        child: TextField(
+                          decoration: InputDecoration(
+                            filled: true,
+                            enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(12), borderSide: const BorderSide(color: Colors.transparent, width: 2.0)),
+                            hintText: 'Search...',
+                            labelStyle: AppTextStyles.lightboldh5,
+                            hintStyle: AppTextStyles.lightboldh4,
+                            contentPadding: EdgeInsets.only(left: 16, right: 16, top: 8, bottom: 8),
+                            suffixIcon: Padding(
+                              padding: const EdgeInsets.only(right: 16),
+                              child: SvgPicture.asset(
+                                'assets/icons/regular/search.svg',
+                                color: AppColors.defaultIconColor.withOpacity(.8),
+                                fit: BoxFit.contain,
+                              ),
                             ),
-                            Text(
-                              'Check Daily Task 🙌',
-                              style: AppTextStyles.bigboldh1,
-                            ),
-                          ],
+                            suffixIconConstraints: BoxConstraints(maxWidth: 36, maxHeight: 20),
+                            fillColor: AppColors.bgColor,
+                            hoverColor: AppColors.bgColor,
+                            focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: AppColors.primaryColor, width: 2.0), borderRadius: BorderRadius.circular(12)),
+                          ),
+                          style: AppTextStyles.boldh5,
                         ),
                       ),
                       SizedBox(
