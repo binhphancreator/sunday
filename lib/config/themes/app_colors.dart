@@ -15,6 +15,7 @@ class AppColors {
   static const secondaryColor = Color(0xFF69e42e);
   static const menuInactiveColor = Color(0xFF424949);
   static const defaultIconColor = Color(0xFF424949);
+  static const whiteIconColor = Colors.white;
   static const primaryBoxShadowColor = Color.fromARGB(30, 17, 12, 46);
   static const primaryGradient = LinearGradient(
     colors: [
@@ -29,6 +30,14 @@ class AppColors {
     colors: [
       Color.fromARGB(255, 171, 219, 148),
       secondaryColor,
+    ],
+    begin: Alignment.topCenter,
+    end: Alignment.bottomCenter,
+  );
+  static const thirdGradient = LinearGradient(
+    colors: [
+      Color(0xFFFEB16A),
+      Color(0xFFF68821),
     ],
     begin: Alignment.topCenter,
     end: Alignment.bottomCenter,

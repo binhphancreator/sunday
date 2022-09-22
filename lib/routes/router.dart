@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sunday/pages/detail_task_page.dart';
 import 'package:sunday/pages/home_page.dart';
 import 'package:sunday/pages/intro_page.dart';
 import 'package:sunday/routes/routes.dart';
@@ -11,6 +12,9 @@ class RouterGenerator {
 
       case RoutesPage.homePage:
         return MaterialPageRoute(builder: (_) => const HomePage());
+
+      case RoutesPage.detailTaskPage:
+        return MaterialPageRoute(builder: (_) => const DetailTaskPage());
 
       default:
         return _errorRoute();
