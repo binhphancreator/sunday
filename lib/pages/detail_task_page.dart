@@ -69,15 +69,15 @@ class _DetailTaskPageState extends State<DetailTaskPage> {
                 children: [
                   Text(
                     'Note:',
-                    style: AppTextStyles.boldh3,
+                    style: AppTextStyles.lightboldh3,
                   ),
                   InkWell(
                     onTap: () {},
                     splashColor: Colors.transparent,
-                    child: SvgPicture.asset(
-                      'assets/icons/regular/edit.svg',
-                      width: 20,
-                      color: AppColors.defaultIconColor,
+                    hoverColor: Colors.transparent,
+                    child: Text(
+                      'Edit Note',
+                      style: AppTextStyles.boldh3,
                     ),
                   )
                 ],
@@ -152,7 +152,7 @@ class _DetailTaskPageState extends State<DetailTaskPage> {
                             style: AppTextStyles.lightboldh5,
                           ),
                           SizedBox(
-                            height: 8,
+                            height: 4,
                           ),
                           Text(
                             'Enver Studio',
@@ -185,7 +185,7 @@ class _DetailTaskPageState extends State<DetailTaskPage> {
                             style: AppTextStyles.lightboldh5,
                           ),
                           SizedBox(
-                            height: 8,
+                            height: 4,
                           ),
                           Text(
                             '14, Jan 2022',
