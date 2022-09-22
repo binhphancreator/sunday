@@ -13,7 +13,7 @@ class _TasksListWidgetState extends State<TasksListWidget> {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
-      padding: EdgeInsets.only(bottom: 36, left: 16),
+      padding: EdgeInsets.only(bottom: 36, left: 16, top: 36),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
