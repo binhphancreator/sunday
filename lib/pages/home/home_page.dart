@@ -27,7 +27,7 @@ class _HomePageState extends State<HomePage> {
           child: Column(
             children: [
               Container(
-                color: AppColors.bgColorWhite,
+                color: AppColors.primaryBgColor,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -77,7 +77,7 @@ class _HomePageState extends State<HomePage> {
                                   'assets/icons/regular/search.svg',
                                   width: 16,
                                   height: 16,
-                                  color: AppColors.menuInactiveColor,
+                                  color: AppColors.defaultIconColor,
                                 ),
                               )
                             ],
@@ -107,8 +107,8 @@ class _HomePageState extends State<HomePage> {
                             ),
                           ),
                           suffixIconConstraints: BoxConstraints(maxWidth: 36, maxHeight: 20),
-                          fillColor: AppColors.bgColor,
-                          hoverColor: AppColors.bgColor,
+                          fillColor: AppColors.secondaryBgColor,
+                          hoverColor: AppColors.secondaryBgColor,
                           focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: AppColors.primaryColor, width: 2.0), borderRadius: BorderRadius.circular(12)),
                         ),
                         style: AppTextStyles.boldh5,
@@ -132,7 +132,7 @@ class _HomePageState extends State<HomePage> {
                               'assets/icons/regular/plus.svg',
                               width: 16,
                               height: 16,
-                              color: AppColors.menuInactiveColor,
+                              color: AppColors.defaultIconColor,
                             ),
                           )
                         ],
@@ -184,7 +184,7 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
       ),
-      backgroundColor: AppColors.bgColor,
+      backgroundColor: AppColors.secondaryBgColor,
     );
   }
 }

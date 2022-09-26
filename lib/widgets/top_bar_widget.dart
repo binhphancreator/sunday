@@ -16,10 +16,12 @@ class TopBarWidget extends StatefulWidget implements PreferredSizeWidget {
 class _TopBarWidgetState extends State<TopBarWidget> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: widget.height,
-      decoration: BoxDecoration(),
-      child: widget.child,
+    return SafeArea(
+      child: Container(
+        height: widget.height,
+        decoration: BoxDecoration(),
+        child: widget.child,
+      ),
     );
   }
 }

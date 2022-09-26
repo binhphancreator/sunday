@@ -41,7 +41,7 @@ class MenuBarItemWidget extends StatelessWidget {
                         ? Colors.white
                         : active
                             ? AppColors.primaryColor
-                            : AppColors.menuInactiveColor),
+                            : AppColors.defaultIconColor),
               ),
             ),
           ),

@@ -11,12 +11,14 @@ class CategoryListWidget extends StatefulWidget {
 class _CategoryListWidgetState extends State<CategoryListWidget> {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SingleChildScrollView(
       padding: EdgeInsets.only(left: 16, right: 16, bottom: 16),
-      child: Column(
+      scrollDirection: Axis.horizontal,
+      child: Row(
         children: [
-          ...[1, 2, 3, 4].map((index) => Padding(
-                padding: EdgeInsets.only(bottom: 16),
+          ...[1, 2, 3, 4].map((index) => Container(
+                padding: EdgeInsets.only(bottom: 16, right: 16),
+                width: 200,
                 child: CategoryItemWidget(),
               ))
         ],

@@ -38,7 +38,7 @@ class _TaskItemWidgetState extends State<TaskItemWidget> {
                       'assets/icons/regular/menu-dots.svg',
                       width: 20,
                       height: 20,
-                      color: AppColors.menuInactiveColor,
+                      color: AppColors.defaultIconColor,
                     )
                   ],
                 ),
@@ -80,7 +80,7 @@ class _TaskItemWidgetState extends State<TaskItemWidget> {
                     ),
                     Text(
                       '75%',
-                      style: AppTextStyles.mainSmallBoldTextBtn,
+                      style: AppTextStyles.primaryboldh4,
                     )
                   ],
                 )

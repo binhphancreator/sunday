@@ -47,7 +47,7 @@ class _MenuBarWidgetState extends State<MenuBarWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(color: AppColors.menuBgColor),
+      decoration: BoxDecoration(color: AppColors.primaryBgColor),
       child: Material(
         color: Colors.white,
         child: Padding(

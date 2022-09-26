@@ -20,7 +20,7 @@ class _ProgressBarWidgetState extends State<ProgressBarWidget> {
           child: Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(12),
-              color: AppColors.lightPrimaryColor,
+              color: AppColors.middleBgColor,
             ),
           ),
         ),
@@ -57,7 +57,7 @@ class _ProgressBarWidgetState extends State<ProgressBarWidget> {
                         padding: EdgeInsets.all(2),
                         decoration: BoxDecoration(borderRadius: BorderRadius.circular(20), gradient: AppColors.primaryGradient),
                         child: Container(
-                          decoration: BoxDecoration(borderRadius: BorderRadius.circular(20), color: AppColors.bgColorWhite),
+                          decoration: BoxDecoration(borderRadius: BorderRadius.circular(20), color: AppColors.primaryBgColor),
                         ),
                       )),
                 ],

@@ -54,7 +54,7 @@ class _DetailTaskPageState extends State<DetailTaskPage> with TickerProviderStat
                   decoration: BoxDecoration(borderRadius: BorderRadius.circular(20), gradient: AppColors.secondaryGradient),
                   child: Text(
                     'In Progress',
-                    style: AppTextStyles.primaryBoldTextBtn,
+                    style: AppTextStyles.whiteboldh3,
                   )),
             ],
           ),
@@ -130,7 +130,7 @@ class _DetailTaskPageState extends State<DetailTaskPage> with TickerProviderStat
                   ),
                   Text(
                     '75%',
-                    style: AppTextStyles.mainSmallBoldTextBtn,
+                    style: AppTextStyles.primaryboldh4,
                   )
                 ],
               ),
@@ -228,13 +228,13 @@ class _DetailTaskPageState extends State<DetailTaskPage> with TickerProviderStat
                     ),
                     child: Text(
                       'Task',
-                      style: AppTextStyles.primaryBoldTextBtn,
+                      style: AppTextStyles.whiteboldh3,
                     ),
                   ),
                   Container(
                     padding: EdgeInsets.symmetric(horizontal: 48, vertical: 16),
                     decoration: BoxDecoration(
-                      color: AppColors.lightBtnColor,
+                      color: AppColors.secondaryBgColor,
                       borderRadius: BorderRadius.circular(999),
                     ),
                     child: Text(
@@ -252,7 +252,6 @@ class _DetailTaskPageState extends State<DetailTaskPage> with TickerProviderStat
               height: 200,
               child: TabBarView(
                 controller: _tabController,
-                physics: FixedExtentScrollPhysics(),
                 children: [
                   Text('Tab 1'),
                   Text('Tab 2'),
@@ -262,7 +261,7 @@ class _DetailTaskPageState extends State<DetailTaskPage> with TickerProviderStat
           ],
         ),
       )),
-      backgroundColor: AppColors.bgColorWhite,
+      backgroundColor: AppColors.primaryBgColor,
     );
   }
 }
