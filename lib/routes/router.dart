@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:sunday/pages/detail_task_page.dart';
-import 'package:sunday/pages/home_page.dart';
-import 'package:sunday/pages/intro_page.dart';
+import 'package:sunday/pages/detail_task/detail_task_page.dart';
+import 'package:sunday/pages/home/home_page.dart';
+import 'package:sunday/pages/intro/intro_page.dart';
 import 'package:sunday/routes/routes.dart';
 
 class RouterGenerator {

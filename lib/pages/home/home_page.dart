@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:sunday/config/themes/app_colors.dart';
 import 'package:sunday/config/themes/app_text_styles.dart';
-import 'package:sunday/widgets/category_list_widget.dart';
-import 'package:sunday/widgets/days_week_list_widget.dart';
+import 'package:sunday/pages/home/category_list_widget.dart';
+import 'package:sunday/pages/home/days_week_list_widget.dart';
 import 'package:sunday/widgets/menu_bar_widget.dart';
-import 'package:sunday/widgets/tasks_list_widget.dart';
+import 'package:sunday/pages/home/tasks_list_widget.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});

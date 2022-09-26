@@ -3,8 +3,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:sunday/routes/routes.dart';
 import 'package:sunday/widgets/progress_bar_widget.dart';
 
-import '../config/themes/app_colors.dart';
-import '../config/themes/app_text_styles.dart';
+import '../../config/themes/app_colors.dart';
+import '../../config/themes/app_text_styles.dart';
 
 class TaskItemWidget extends StatefulWidget {
   const TaskItemWidget({super.key});

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sunday/widgets/task_item_widget.dart';
+import 'package:sunday/pages/home/task_item_widget.dart';
 
 class TasksListWidget extends StatefulWidget {
   const TasksListWidget({super.key});

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sunday/widgets/category_item_widget.dart';
+import 'package:sunday/pages/home/category_item_widget.dart';
 
 class CategoryListWidget extends StatefulWidget {
   const CategoryListWidget({super.key});

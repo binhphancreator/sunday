@@ -30,7 +30,7 @@ class _DetailTaskPageState extends State<DetailTaskPage> {
                 customBorder: CircleBorder(side: BorderSide.none),
                 child: SvgPicture.asset(
                   'assets/icons/regular/arrow-small-left.svg',
-                  width: 32,
+                  width: 24,
                   color: AppColors.defaultIconColor,
                   fit: BoxFit.contain,
                 ),
