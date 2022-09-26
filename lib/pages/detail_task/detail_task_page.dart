@@ -12,7 +12,21 @@ class DetailTaskPage extends StatefulWidget {
   State<DetailTaskPage> createState() => _DetailTaskPageState();
 }
 
-class _DetailTaskPageState extends State<DetailTaskPage> {
+class _DetailTaskPageState extends State<DetailTaskPage> with TickerProviderStateMixin {
+  late TabController _tabController;
+
+  @override
+  void initState() {
+    _tabController = TabController(length: 2, vsync: this);
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    _tabController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -198,10 +212,57 @@ class _DetailTaskPageState extends State<DetailTaskPage> {
                 ],
               ),
             ),
+            SizedBox(
+              height: 24,
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 16),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Container(
+                    padding: EdgeInsets.symmetric(horizontal: 48, vertical: 16),
+                    decoration: BoxDecoration(
+                      gradient: AppColors.primaryGradient,
+                      borderRadius: BorderRadius.circular(999),
+                    ),
+                    child: Text(
+                      'Task',
+                      style: AppTextStyles.primaryBoldTextBtn,
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.symmetric(horizontal: 48, vertical: 16),
+                    decoration: BoxDecoration(
+                      color: AppColors.lightBtnColor,
+                      borderRadius: BorderRadius.circular(999),
+                    ),
+                    child: Text(
+                      'Team Members',
+                      style: AppTextStyles.boldh3,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 12,
+            ),
+            SizedBox(
+              height: 200,
+              child: TabBarView(
+                controller: _tabController,
+                physics: FixedExtentScrollPhysics(),
+                children: [
+                  Text('Tab 1'),
+                  Text('Tab 2'),
+                ],
+              ),
+            )
           ],
         ),
       )),
-      backgroundColor: AppColors.bgColor,
+      backgroundColor: AppColors.bgColorWhite,
     );
   }
 }
