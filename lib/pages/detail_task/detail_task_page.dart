@@ -4,6 +4,7 @@ import 'package:sunday/config/themes/app_colors.dart';
 import 'package:sunday/config/themes/app_text_styles.dart';
 import 'package:sunday/widgets/progress_bar_widget.dart';
 import 'package:sunday/widgets/top_bar_widget.dart';
+import 'package:percent_indicator/percent_indicator.dart';
 
 class DetailTaskPage extends StatefulWidget {
   const DetailTaskPage({super.key});
@@ -249,12 +250,44 @@ class _DetailTaskPageState extends State<DetailTaskPage> with TickerProviderStat
               height: 12,
             ),
             SizedBox(
-              height: 200,
+              height: 400,
               child: TabBarView(
                 controller: _tabController,
                 children: [
-                  Text('Tab 1'),
-                  Text('Tab 2'),
+                  ListView(
+                    scrollDirection: Axis.vertical,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: [
+                              CircularPercentIndicator(
+                                radius: 30.0,
+                                lineWidth: 5.0,
+                                percent: .7,
+                                circularStrokeCap: CircularStrokeCap.round,
+                                center: Text(
+                                  "100%",
+                                  style: AppTextStyles.boldh4,
+                                ),
+                                animation: true,
+                                backgroundColor: AppColors.secondaryBgColor,
+                                linearGradient: AppColors.primaryGradient,
+                              ),
+                              SizedBox(
+                                width: 12,
+                              ),
+                            ],
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                  ListView(
+                    scrollDirection: Axis.vertical,
+                    children: [],
+                  ),
                 ],
               ),
             )

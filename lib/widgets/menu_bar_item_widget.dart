@@ -63,7 +63,7 @@ class MenuBarItemWidget extends StatelessWidget {
       case IconTypes.regular:
         return 'assets/icons/regular/$icon';
       default:
-        return 'assets/icons/solid/$icon';
+        return 'assets/icons/regular/$icon';
     }
   }
 }
