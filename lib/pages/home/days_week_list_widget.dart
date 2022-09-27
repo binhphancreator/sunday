@@ -29,16 +29,16 @@ class _DaysWeekListWidgetState extends State<DaysWeekListWidget> {
               margin: EdgeInsets.only(right: 12),
               width: 55,
               height: 80,
-              decoration: BoxDecoration(color: now.weekday == currentDay.weekday ? AppColors.primaryColor : AppColors.lightBtnColor, borderRadius: BorderRadius.circular(30), gradient: now.weekday == currentDay.weekday ? AppColors.primaryGradient : AppColors.lightGradient),
+              decoration: BoxDecoration(color: now.weekday == currentDay.weekday ? AppColors.primaryColor : AppColors.secondaryBgColor, borderRadius: BorderRadius.circular(30), gradient: now.weekday == currentDay.weekday ? AppColors.primaryGradient : AppColors.lightGradient),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Text(shortWeekday[currentDay.weekday - 1], style: now.weekday == currentDay.weekday ? AppTextStyles.primaryNormalTextBtn : AppTextStyles.secondaryNormalTextBtn),
+                  Text(shortWeekday[currentDay.weekday - 1], style: now.weekday == currentDay.weekday ? AppTextStyles.whiteboldh3 : AppTextStyles.boldh3),
                   SizedBox(
                     height: 4,
                   ),
-                  Text(currentDay.day.toString(), style: now.weekday == currentDay.weekday ? AppTextStyles.primaryBoldTextBtn : AppTextStyles.secondaryBoldTextBtn),
+                  Text(currentDay.day.toString(), style: now.weekday == currentDay.weekday ? AppTextStyles.whiteboldh3 : AppTextStyles.boldh3),
                 ],
               ),
             ),

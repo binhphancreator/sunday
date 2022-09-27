@@ -77,7 +77,7 @@ class _IntroPageState extends State<IntroPage> {
                             width: _indexCurrent == entry.key ? 12 : 6,
                             height: _indexCurrent == entry.key ? 12 : 6,
                             margin: EdgeInsets.only(right: 4),
-                            decoration: BoxDecoration(shape: BoxShape.circle, color: _indexCurrent == entry.key ? AppColors.primaryColor : AppColors.primaryBtnColor.withOpacity(.4)),
+                            decoration: BoxDecoration(shape: BoxShape.circle, color: _indexCurrent == entry.key ? AppColors.primaryColor : AppColors.darkBgColor.withOpacity(.4)),
                           ),
                         );
                       }).toList(),
@@ -99,7 +99,7 @@ class _IntroPageState extends State<IntroPage> {
                   padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 16),
                   child: Text(
                     S.of(context).next,
-                    style: AppTextStyles.primaryNormalTextBtn,
+                    style: AppTextStyles.whiteboldh3,
                     textAlign: TextAlign.center,
                   ),
                 ),
@@ -115,13 +115,13 @@ class _IntroPageState extends State<IntroPage> {
                 child: Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(32.0),
-                    color: AppColors.lightPrimaryColor,
+                    color: AppColors.middleBgColor,
                   ),
                   width: MediaQuery.of(context).size.width - 64,
                   padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 16),
                   child: Text(
                     S.of(context).skip,
-                    style: AppTextStyles.mainNormalTextBtn,
+                    style: AppTextStyles.primaryboldh3,
                     textAlign: TextAlign.center,
                   ),
                 ),

@@ -19,7 +19,7 @@ class _CategoryItemWidgetState extends State<CategoryItemWidget> {
         padding: EdgeInsets.all(16),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12),
-          color: AppColors.bgColorWhite,
+          color: AppColors.primaryBgColor,
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -31,7 +31,7 @@ class _CategoryItemWidgetState extends State<CategoryItemWidget> {
                 Container(
                   padding: EdgeInsets.all(8),
                   decoration: BoxDecoration(
-                    color: AppColors.bgColor,
+                    color: AppColors.secondaryBgColor,
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: Image.asset(
@@ -46,14 +46,14 @@ class _CategoryItemWidgetState extends State<CategoryItemWidget> {
                 ),
                 Text(
                   'Coding',
-                  style: AppTextStyles.boldh2,
+                  style: AppTextStyles.boldh3,
                 ),
                 SizedBox(
                   height: 8,
                 ),
                 Text(
                   '12 Tasks',
-                  style: AppTextStyles.lightboldh3,
+                  style: AppTextStyles.lightboldh4,
                 )
               ],
             ),
