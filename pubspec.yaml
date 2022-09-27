@@ -39,6 +39,6 @@ flutter:
         - asset: assets/fonts/Quicksand-Light.ttf
         - asset: assets/fonts/Quicksand-Medium.ttf
         - asset: assets/fonts/Quicksand-Regular.ttf
-        - asset: assets/fonts/Quicksand-Semibold.ttf
+        - asset: assets/fonts/Quicksand-SemiBold.ttf
 flutter_intl:
   enabled: true
