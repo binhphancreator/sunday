@@ -1,10 +1,13 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:sunday/config/themes/app_colors.dart';
 import 'package:sunday/config/themes/app_text_styles.dart';
+import 'package:sunday/pages/detail_task/child_task_item_widget.dart';
+import 'package:sunday/pages/detail_task/menu_bar_widget.dart';
 import 'package:sunday/widgets/progress_bar_widget.dart';
 import 'package:sunday/widgets/top_bar_widget.dart';
-import 'package:percent_indicator/percent_indicator.dart';
 
 class DetailTaskPage extends StatefulWidget {
   const DetailTaskPage({super.key});
@@ -13,21 +16,7 @@ class DetailTaskPage extends StatefulWidget {
   State<DetailTaskPage> createState() => _DetailTaskPageState();
 }
 
-class _DetailTaskPageState extends State<DetailTaskPage> with TickerProviderStateMixin {
-  late TabController _tabController;
-
-  @override
-  void initState() {
-    _tabController = TabController(length: 2, vsync: this);
-    super.initState();
-  }
-
-  @override
-  void dispose() {
-    _tabController.dispose();
-    super.dispose();
-  }
-
+class _DetailTaskPageState extends State<DetailTaskPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -92,7 +81,7 @@ class _DetailTaskPageState extends State<DetailTaskPage> with TickerProviderStat
                     hoverColor: Colors.transparent,
                     child: Text(
                       'Edit Note',
-                      style: AppTextStyles.boldh3,
+                      style: AppTextStyles.boldh4,
                     ),
                   )
                 ],
@@ -222,25 +211,31 @@ class _DetailTaskPageState extends State<DetailTaskPage> with TickerProviderStat
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
-                    padding: EdgeInsets.symmetric(horizontal: 48, vertical: 16),
+                    width: 140,
+                    height: 50,
                     decoration: BoxDecoration(
                       gradient: AppColors.primaryGradient,
                       borderRadius: BorderRadius.circular(999),
                     ),
-                    child: Text(
-                      'Task',
-                      style: AppTextStyles.whiteboldh3,
+                    child: Center(
+                      child: Text(
+                        'Task',
+                        style: AppTextStyles.whiteboldh4,
+                      ),
                     ),
                   ),
                   Container(
-                    padding: EdgeInsets.symmetric(horizontal: 48, vertical: 16),
+                    width: 140,
+                    height: 50,
                     decoration: BoxDecoration(
                       color: AppColors.secondaryBgColor,
                       borderRadius: BorderRadius.circular(999),
                     ),
-                    child: Text(
-                      'Team Members',
-                      style: AppTextStyles.boldh3,
+                    child: Center(
+                      child: Text(
+                        'Team Members',
+                        style: AppTextStyles.boldh4,
+                      ),
                     ),
                   ),
                 ],
@@ -249,52 +244,27 @@ class _DetailTaskPageState extends State<DetailTaskPage> with TickerProviderStat
             SizedBox(
               height: 12,
             ),
-            SizedBox(
-              height: 400,
-              child: TabBarView(
-                controller: _tabController,
+            AnimatedContainer(
+              duration: Duration(milliseconds: 300),
+              padding: EdgeInsets.symmetric(horizontal: 16),
+              child: Column(
                 children: [
-                  ListView(
-                    scrollDirection: Axis.vertical,
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Row(
-                            children: [
-                              CircularPercentIndicator(
-                                radius: 30.0,
-                                lineWidth: 5.0,
-                                percent: .7,
-                                circularStrokeCap: CircularStrokeCap.round,
-                                center: Text(
-                                  "100%",
-                                  style: AppTextStyles.boldh4,
-                                ),
-                                animation: true,
-                                backgroundColor: AppColors.secondaryBgColor,
-                                linearGradient: AppColors.primaryGradient,
-                              ),
-                              SizedBox(
-                                width: 12,
-                              ),
-                            ],
-                          ),
-                        ],
-                      )
-                    ],
-                  ),
-                  ListView(
-                    scrollDirection: Axis.vertical,
-                    children: [],
-                  ),
+                  ...List<int>.generate(5, (index) => index + 1).map(
+                    (e) => Padding(
+                      padding: EdgeInsets.symmetric(vertical: 12),
+                      child: ChildTaskItemWidget(
+                        percent: Random().nextDouble(),
+                      ),
+                    ),
+                  )
                 ],
               ),
-            )
+            ),
           ],
         ),
       )),
       backgroundColor: AppColors.primaryBgColor,
+      bottomNavigationBar: MenuBarWidget(),
     );
   }
 }
