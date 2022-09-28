@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:sunday/routes/router.dart';
-import 'generated/l10n.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class Sunday extends StatelessWidget {
   const Sunday({super.key, required this.initRoute});
@@ -11,16 +10,12 @@ class Sunday extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      localizationsDelegates: [
-        S.delegate,
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-      ],
-      supportedLocales: S.delegate.supportedLocales,
       title: 'Sunday',
       initialRoute: initRoute,
       onGenerateRoute: RouterGenerator.generateRoute,
+      localizationsDelegates: context.localizationDelegates,
+      supportedLocales: context.supportedLocales,
+      locale: context.locale,
     );
   }
 }
