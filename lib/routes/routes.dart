@@ -4,4 +4,10 @@ class RoutesPage {
   static const introPage = 'Intro';
   static const addProjectPage = 'Add_Project';
   static const detailTaskPage = 'Detail_Task';
+  static const profilePage = 'Profile';
+
+  static const routesUseMenu = [
+    homePage,
+    profilePage,
+  ];
 }

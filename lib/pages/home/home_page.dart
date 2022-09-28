@@ -4,7 +4,6 @@ import 'package:sunday/config/themes/app_colors.dart';
 import 'package:sunday/config/themes/app_text_styles.dart';
 import 'package:sunday/pages/home/category_list_widget.dart';
 import 'package:sunday/pages/home/days_week_list_widget.dart';
-import 'package:sunday/widgets/menu_bar_widget.dart';
 import 'package:sunday/pages/home/tasks_list_widget.dart';
 
 class HomePage extends StatefulWidget {
@@ -20,7 +19,6 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: const MenuBarWidget(),
       body: SafeArea(
         child: SingleChildScrollView(
           scrollDirection: Axis.vertical,

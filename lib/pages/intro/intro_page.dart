@@ -1,6 +1,6 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:sunday/config/themes/app_text_styles.dart';
-import 'package:sunday/generated/l10n.dart';
 import 'package:sunday/routes/routes.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sunday/config/constants/app_prefs.dart';
@@ -46,7 +46,7 @@ class _IntroPageState extends State<IntroPage> {
                     height: 48,
                   ),
                   Text(
-                    S.of(context).intro_slide_1,
+                    tr('intro1'),
                     style: AppTextStyles.bigIntro,
                     textAlign: TextAlign.center,
                   ),
@@ -54,7 +54,7 @@ class _IntroPageState extends State<IntroPage> {
                     height: 12,
                   ),
                   Text(
-                    S.of(context).bl_intro_slide_1,
+                    tr('sub_intro1'),
                     style: AppTextStyles.bigIntro2,
                     textAlign: TextAlign.center,
                   ),
@@ -98,7 +98,7 @@ class _IntroPageState extends State<IntroPage> {
                   width: MediaQuery.of(context).size.width - 64,
                   padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 16),
                   child: Text(
-                    S.of(context).next,
+                    tr('next'),
                     style: AppTextStyles.whiteboldh3,
                     textAlign: TextAlign.center,
                   ),
@@ -120,7 +120,7 @@ class _IntroPageState extends State<IntroPage> {
                   width: MediaQuery.of(context).size.width - 64,
                   padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 16),
                   child: Text(
-                    S.of(context).skip,
+                    tr('skip'),
                     style: AppTextStyles.primaryboldh3,
                     textAlign: TextAlign.center,
                   ),
