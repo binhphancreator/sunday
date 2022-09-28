@@ -11,8 +11,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_localizations:
-    sdk: flutter
+  easy_localization: ^3.0.1
   cupertino_icons: ^1.0.2
   carousel_slider: ^4.1.1
   flutter_svg: ^1.1.5
@@ -31,6 +30,7 @@ flutter:
     - assets/icons/
     - assets/icons/regular/
     - assets/icons/solid/
+    - assets/langs/
   uses-material-design: true
   fonts:
     - family: Quicksand
@@ -40,5 +40,3 @@ flutter:
         - asset: assets/fonts/Quicksand-Medium.ttf
         - asset: assets/fonts/Quicksand-Regular.ttf
         - asset: assets/fonts/Quicksand-SemiBold.ttf
-flutter_intl:
-  enabled: true
