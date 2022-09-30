@@ -9,11 +9,14 @@ class MenuBarItemWidget extends StatelessWidget {
   final bool center;
   final String iconAsset;
 
+  final Function()? onTap;
+
   const MenuBarItemWidget({
     Key? key,
     required this.iconAsset,
     this.active = false,
     this.center = false,
+    this.onTap,
   }) : super(key: key);
 
   @override
@@ -25,7 +28,7 @@ class MenuBarItemWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           InkWell(
-            onTap: () {},
+            onTap: onTap ?? () {},
             splashColor: center ? Colors.transparent : Colors.black.withOpacity(0.1),
             borderRadius: BorderRadius.circular(32),
             child: Container(
