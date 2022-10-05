@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:sunday/pages/detail_task/detail_task_page.dart';
-import 'package:sunday/pages/home/home_page.dart';
 import 'package:sunday/pages/intro/intro_page.dart';
+import 'package:sunday/pages/main/main_page.dart';
 import 'package:sunday/pages/preload/preload_page.dart';
-import 'package:sunday/pages/profile/profile_page.dart';
 import 'package:sunday/routes/routes.dart';
 
 class RouterGenerator {
@@ -16,10 +15,10 @@ class RouterGenerator {
         return MaterialPageRoute(builder: (_) => const IntroPage());
 
       case RoutesPage.homePage:
-        return MaterialPageRoute(builder: (_) => const HomePage());
+        return MaterialPageRoute(builder: (_) => const MainPage());
 
       case RoutesPage.profilePage:
-        return MaterialPageRoute(builder: (_) => const ProfilePage());
+        return MaterialPageRoute(builder: (_) => const MainPage());
 
       case RoutesPage.detailTaskPage:
         return MaterialPageRoute(builder: (_) => const DetailTaskPage());
