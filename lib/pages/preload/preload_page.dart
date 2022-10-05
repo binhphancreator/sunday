@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sunday/config/constants/app_prefs.dart';
 import 'package:sunday/routes/routes.dart';
+import 'dart:async';
 
 class PreloadPage extends StatefulWidget {
   const PreloadPage({super.key});
@@ -13,8 +14,12 @@ class PreloadPage extends StatefulWidget {
 class _PreloadPageState extends State<PreloadPage> {
   @override
   void initState() {
-    WidgetsBinding.instance.addPostFrameCallback((_) => {getInitRoute().then((route) => Navigator.popAndPushNamed(context, route))});
     super.initState();
+    Timer(Duration(seconds: 2), handleTimeout);
+  }
+
+  void handleTimeout() {
+    getInitRoute().then((route) => Navigator.popAndPushNamed(context, route));
   }
 
   @override
