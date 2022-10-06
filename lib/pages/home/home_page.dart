@@ -14,7 +14,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final _srcAvatar = 'https://images.pexels.com/photos/1382734/pexels-photo-1382734.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1';
+  final _srcAvatar = 'https://images.pexels.com/photos/1382734/pexels-photo-1382734.jpeg?auto=compress&cs=tinysrgb&w=48&dpr=1';
 
   @override
   Widget build(BuildContext context) {
@@ -29,63 +29,6 @@ class _HomePageState extends State<HomePage> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.all(16),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Row(
-                            children: [
-                              Container(
-                                width: 48,
-                                height: 48,
-                                decoration: BoxDecoration(
-                                  image: DecorationImage(image: NetworkImage(_srcAvatar), fit: BoxFit.cover),
-                                  shape: BoxShape.circle,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 12,
-                              ),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    'Phan Văn Bình',
-                                    style: AppTextStyles.boldh2,
-                                    textAlign: TextAlign.start,
-                                  ),
-                                  SizedBox(
-                                    height: 3,
-                                  ),
-                                  Text(
-                                    'Good morning 👋',
-                                    style: AppTextStyles.lightboldh4,
-                                    textAlign: TextAlign.start,
-                                  )
-                                ],
-                              )
-                            ],
-                          ),
-                          Row(
-                            children: [
-                              GestureDetector(
-                                onTap: () {},
-                                child: SvgPicture.asset(
-                                  'assets/icons/regular/search.svg',
-                                  width: 16,
-                                  height: 16,
-                                  color: AppColors.defaultIconColor,
-                                ),
-                              )
-                            ],
-                          )
-                        ],
-                      ),
-                    ),
-                    SizedBox(
-                      height: 12,
-                    ),
                     Padding(
                       padding: const EdgeInsets.all(16.0),
                       child: TextField(
